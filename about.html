@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/9d3af069c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+     <nav>
+        <img src="images/umi.png" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#portfolio">empty</a></li>
+            <li><a href="#contact">empty</a></li>
+        </ul>
+    </nav>
+    </div>
+</div>
+<!-- --------about--------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/logo2.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus enim obcaecati facilis maxime veritatis, officia molestiae tempore modi assumenda culpa quasi laborum dolores quam magni ullam adipisci vero distinctio eligendi error, ipsa debitis! 
+                   Laboriosam, nulla alias vel, voluptatum odio suscipit nemo, recusandae dolorem ad sit magnam odit. Eum, repudiandae. Iure nostrum adipisci aspernatur fugit molestias nemo repellat quasi distinctio doloremque ducimus, facere deleniti nam voluptatum cumque officia quisquam architecto. 
+                   Ad facilis vero itaque porro incidunt sequi, odit natus molestias quia architecto nulla quasi reiciendis ducimus deleniti hic eveniet inventore vitae consequuntur, obcaecati, quas dolorum dolore. Placeat dolore commodi odio aut.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Cat Design</span><br>Designing Cat Pictures</li>
+                        <li><span>Web Dev</span><br>Designing Poop Interaces</li>
+                        <li><span>App Dev</span><br>Designing Poop Interaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Lebron</span><br>Designing Poop Interaces</li>
+                        <li><span>Tom</span><br>Designing Poop Interaces</li>
+                        <li><span>Max Verstappen</span><br>Designing Poop Interaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>school1</span><br>Designing Poop Interaces</li>
+                        <li><span>highschool</span><br>Designing Poop Interaces</li>
+                        <li><span>college</span><br>Designing Poop Interaces</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- script for about -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+</body>
+</html>
