@@ -12,13 +12,12 @@
     <div id="header">
         <div class="container">
          <nav>
-            <img src="images/umi.png" class="logo">
+            <h3 id="current-time">12:00:00</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="#portfolio">empty</a></li>
-                <li><a href="#contact">empty</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         </div>
@@ -30,22 +29,35 @@
         <div class="services-list">
             <div>
                 <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quis temporibus mollitia deleniti nobis velit pariatur aspernatur magnam iure, saepe quia exercitationem ad assumenda hic sint cupiditate incidunt, cumque facere.</p>
-                <a href="#">Learn More</a>
+                <h2>Resume</h2>
+                <p>Find my resume here.</p>
+                <a href="https://docs.google.com/document/d/1qX3N19OYpNrKRaZg3-XrkH6sNiNg2mVDiheZa-zhVjw/edit?usp=sharing">This will take you to Google Docs where you can view it!</a>
             </div>
             <div>
                 <i class="fa-solid fa-car"></i>
-                <h2>UI/UX</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quis temporibus mollitia deleniti nobis velit pariatur aspernatur magnam iure, saepe quia exercitationem ad assumenda hic sint cupiditate incidunt, cumque facere.</p>
-                <a href="#">Learn More</a>
+                <h2>Github</h2>
+                <p>Find all my personal and school projects from my Github!</p>
+                <a href="https://github.com/UmerAnwar05">|School Github Projects|</a>
+                <a href="https://github.com/Teefus05">|Personal Projects|</a>
             </div>
             <div>
                 <i class="fa-brands fa-youtube"></i>
-                <h2>Poop</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quis temporibus mollitia deleniti nobis velit pariatur aspernatur magnam iure, saepe quia exercitationem ad assumenda hic sint cupiditate incidunt, cumque facere.</p>
-                <a href="#">Learn More</a>
+                <h2>Youtube</h2>
+                <p>On my free time I love to upload highlights of my favorite hobby which is gaming.</p>
+                <a href="https://www.youtube.com/channel/UCjyHe1UWMCZat0atDjvjFyQ">Click To Explore</a>
             </div>
         </div>
     </div>
 </div>
+
+<!-- script for clock -->
+<script>
+    let time = document.getElementById("current-time")
+    setInterval(() =>{
+      let d = new Date();
+    time.innerHTML = d.toLocaleTimeString();
+    },0)
+  </script>
+
+</body>
+</html>

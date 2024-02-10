@@ -11,14 +11,13 @@
 <body>
 <div id="header">
     <div class="container">
+        <h2 id="current-time">12:00:00</h2>
      <nav>
-        <img src="images/umi.png" class="logo">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#portfolio">empty</a></li>
-            <li><a href="#contact">empty</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     </div>
@@ -32,35 +31,44 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus enim obcaecati facilis maxime veritatis, officia molestiae tempore modi assumenda culpa quasi laborum dolores quam magni ullam adipisci vero distinctio eligendi error, ipsa debitis! 
-                   Laboriosam, nulla alias vel, voluptatum odio suscipit nemo, recusandae dolorem ad sit magnam odit. Eum, repudiandae. Iure nostrum adipisci aspernatur fugit molestias nemo repellat quasi distinctio doloremque ducimus, facere deleniti nam voluptatum cumque officia quisquam architecto. 
-                   Ad facilis vero itaque porro incidunt sequi, odit natus molestias quia architecto nulla quasi reiciendis ducimus deleniti hic eveniet inventore vitae consequuntur, obcaecati, quas dolorum dolore. Placeat dolore commodi odio aut.
+                <p>Hello, my name is Umer, I am a freshman at CSUF, majoring in computer engineering. 
                 </p>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Awards')">Awards</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Cat Design</span><br>Designing Cat Pictures</li>
-                        <li><span>Web Dev</span><br>Designing Poop Interaces</li>
-                        <li><span>App Dev</span><br>Designing Poop Interaces</li>
+                        <li><span>Proficient in Google Docs Suite</span><br></li>
+                        <li><span>Proficient in Microsoft Office Suite</span><br></li>
+                        <li><span>Learning C++ and Web Design (Javascript & HTML)</span><br></li>
+                        <li><span>Solidworks 3D Modeling Software</span><br>Worked on School Projects</li>
+                        <li><span>Proficent in Windows and Linux</span><br>Worked on School Projects</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>Lebron</span><br>Designing Poop Interaces</li>
-                        <li><span>Tom</span><br>Designing Poop Interaces</li>
-                        <li><span>Max Verstappen</span><br>Designing Poop Interaces</li>
+                        <li><span>Aveva Software LLC, Lake Forest, CA [June 2022 - July 2022 - Summer Intern]</span><br>- Throughout my internship, my responsibilities involved observing and understanding Aveva's operations through interactions with different departments. This included a full-day shadowing experience to gain insights into their daily tasks. Moreover, I had the opportunity to test and see demonstrations, learn from experienced professionals, and communicate with fellow interns. Additionally, I gained practical knowledge of Aveva's software through hands-on experience.
+                        </li>
+                        <li><span></span><br></li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>school1</span><br>Designing Poop Interaces</li>
-                        <li><span>highschool</span><br>Designing Poop Interaces</li>
-                        <li><span>college</span><br>Designing Poop Interaces</li>
+                        <li><span>High School</span><br>- Tustin High School</li>
+                        <li><span>College</span><br>- California State University, Fullerton [CSUF]</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Awards">
+                    <ul>
+                        <li><span>Superintendent Honor Roll - 2020</span></li>
+                        <li><span>Principle Honor Roll - 2022</span></li>
+                        <li><span>Communication Skills for Buisness Certiport - 2022</span><br>- Professional Communication Certificate</li>
+                        <li><span>Tustin High School Diploma - 2023</span></li>
+                        <li><span>Superintendent Honor Roll - 2021</span></li>
                     </ul>
                 </div>
             </div>
@@ -87,6 +95,15 @@
     }
 </script>
 
+<!-- script for clock -->
+<script>
+    let time = document.getElementById("current-time")
+    setInterval(() =>{
+      let d = new Date();
+    time.innerHTML = d.toLocaleTimeString();
+    },0)
+  </script>
+  
 
 </body>
 </html>

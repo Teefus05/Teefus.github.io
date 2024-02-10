@@ -11,22 +11,35 @@
 <body>
 <div id="header">
     <div class="container">
+        <h2 id="current-time">12:00:00</h2>
      <nav>
-        <img src="images/umi.png" class="logo">
         <ul>
             <li><a href="#header">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="#portfolio">empty</a></li>
-            <li><a href="#contact">empty</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
         <div class="header-text">
-            <p><span>Computer Engineering Student</span></p>
-            <h1>Hi, I'm <span1>Umer A</span1><br>From California</h1>
+            <p><span></span></p>
+            <h1>Hi, I'm <span1>Umer </span1><br>Welcome to my <span1>Portfoilio</span1>!</h1>
         </div>
     </div>
 </div>
 
+<!-- script for clock -->
+<script>
+  let time = document.getElementById("current-time")
+  setInterval(() =>{
+    let d = new Date();
+  time.innerHTML = d.toLocaleTimeString();
+  },0)
+</script>
+
+
 </body>
 </html>
+
+
+
+

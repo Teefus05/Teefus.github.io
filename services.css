@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family:sans-serif;
     box-sizing: border-box;
 }
 html{
@@ -11,18 +11,24 @@ html{
 }
 
 body{
-    background: #080808;
-    color: #fff;
+    background-image: url(images/911.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 .container{ /*pii */
     padding: 10px 5%;
 }
 
 nav{
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-radius: 15px;
+    padding-left: 490px; /*change in others */
 }
 
 .logo{
@@ -32,14 +38,16 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 60px;
 }
 
 nav ul li a{
+    align-items: center;
     color: #fff;
     text-decoration: none;
     font-size: 20px;
     position: relative;
+    font-weight: 550;
 }
 nav ul li a::after{ /* underline under options */
     content: '';
@@ -54,24 +62,11 @@ nav ul li a::after{ /* underline under options */
 nav ul li a:hover::after{
     width: 100%;
 }
-.header-text{ /* smaller text */
-    margin-top: 20%;
-    font-size: 20px;
-}
-.header-text h1{ /* bigger text */
-    font-size: 100px;
-    margin-top: 20px;
-}
-.header-text p span{ /* span color text */
-    color: #703394;
-}
-.header-text h1 span1{ /* span color text */
-    color: #943333;
-}
 
 /* ---------------services--------- */
 #services{
     padding: 30px 0;
+    color: rgb(255, 255, 255); /* ---------------micro text--------- */
 }
 .services-list{
     display: grid;
@@ -80,7 +75,8 @@ nav ul li a:hover::after{
     margin-top: 50px;
 }
 .services-list div{
-    background: #262626;
+    background: #0ef;
+    background-image: url(images/c1.png);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -89,22 +85,37 @@ nav ul li a:hover::after{
 
 }
 .services-list div i{
+    color: rgb(255, 255, 255);
     font-size: 50px;
     margin-bottom: 30px;
 }
 .services-list div h2{
+    color: rgb(255, 255, 255);
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 .services-list div a {
     text-decoration: none;
-    color:white;
+    color:#0ef;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background-image: url(images/c1.png);
     transform: translateY(-10px);
+}
+.container h3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px 0px; /* Optional margin to add some space from the edges */
+    height: 50px;
+    font-size: 20px;
+    transform: translate(-50%, -5%);
+    color: #ffffff;
+    font-weight: 550;
+    letter-spacing: 3px;
+    border-radius: 20px;
 }

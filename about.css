@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family:sans-serif;
     box-sizing: border-box;
 }
 html{
@@ -11,8 +11,10 @@ html{
 }
 
 body{
-    background: #080808;
-    color: #fff;
+    background-image: url(images/911.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .container{ /*pii */
@@ -20,10 +22,13 @@ body{
 }
 
 nav{
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-radius: 15px;
+    padding-left: 490px; /*change in others */
 }
 
 .logo{
@@ -33,14 +38,16 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 60px;
 }
 
 nav ul li a{
+    align-items: center;
     color: #fff;
     text-decoration: none;
     font-size: 20px;
     position: relative;
+    font-weight: 550;
 }
 nav ul li a::after{ /* underline under options */
     content: '';
@@ -60,7 +67,9 @@ nav ul li a:hover::after{
 /* --------about--------- */
 #about{
     padding: 80px 0;
-    color: #ababab;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    color: #ffffff;
 }
 .row{
     display: flex;
@@ -76,10 +85,11 @@ nav ul li a:hover::after{
 }
 .about-col-2{
     flex-basis: 60%;
+    font-weight: 200%;
 }
 .sub-title{
-    font-size: 60px;
-    font-weight: 600;
+    font-size: 50px;
+    font-weight: 200%;
     color: #fff;
 }
 .tab-titles{
@@ -88,36 +98,55 @@ nav ul li a:hover::after{
 }
 .tab-links{
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    color: #ffffff;
 }
 .tab-links::after{  /* line under clickable things */
     content: '';
     width: 0;
-    height: 3px;
-    background: #ff004f;
+    height: 5px;
+    background: #ffffff;
     position: absolute;
     left: 0;
     bottom: -8px;
     transition: 0.5s;
+    color: #ffffff;
 }
 .tab-links.active-link::after{ /* line under clickable things */
     width: 50%;
 }
 .tab-contents ul li{
     list-style: none;
-    margin: 10px 0;
+    margin: 55px 0;
 
 }
 .tab-contents ul li span{
-    color: #ff004f;
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 400;
+    
 }
 .tab-contents{
     display: none;
+    font-size: 20px;
+    font-weight: 200;
 }
 .tab-contents.active-tab{
     display: block;
+}
+.container h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px 0px; /* Optional margin to add some space from the edges */
+    height: 50px;
+    font-size: 20px;
+    transform: translate(-50%, -5%);
+    color: #ffffff;
+    font-weight: 550;
+    letter-spacing: 3px;
+    border-radius: 20px;
 }
