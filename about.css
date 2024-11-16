@@ -1,55 +1,56 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family:sans-serif;
+    font-family: sans-serif;
     box-sizing: border-box;
 }
-html{
 
+html {
     scroll-behavior: smooth;
-
 }
 
-body{
+body {
     background-image: url(images/911.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    min-height: 100vh; /* Ensures the background covers the viewport */
 }
 
-.container{ /*pii */
+.container {
     padding: 10px 5%;
+    max-width: 1200px; /* Limits width for readability */
+    margin: 0 auto; /* Centers content */
 }
 
-nav{
-    height: 50px;
+/* Navigation Bar */
+nav {
+    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center; /* Center navigation menu */
+    flex-wrap: wrap; /* Prevents overlap if screen shrinks */
     border-radius: 15px;
-    padding-left: 490px; /*change in others */
 }
 
-.logo{
-    width: 200px;
+nav ul {
+    display: flex;
+    gap: 30px; /* Adds spacing between menu items */
 }
 
-nav ul li{
-    display: inline-block;
+nav ul li {
     list-style: none;
-    margin: 10px 60px;
 }
 
-nav ul li a{
-    align-items: center;
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    position: relative;
     font-weight: 550;
+    position: relative;
 }
-nav ul li a::after{ /* underline under options */
+
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -59,52 +60,56 @@ nav ul li a::after{ /* underline under options */
     bottom: -6px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
-    width: 100%;
+
+nav ul li a:hover::after {
+    width: 100%; /* Creates underline effect on hover */
 }
 
-
-/* --------about--------- */
-#about{
+/* About Section */
+#about {
     padding: 80px 0;
     -webkit-text-stroke-width: 0.2px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
     color: #ffffff;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between columns */
 }
-.about-col-1{
-    flex-basis: 35%;
+
+.about-col-1,
+.about-col-2 {
+    flex-basis: 48%; /* Columns take up half the width with some gap */
 }
-.about-col-1 img{
+
+.about-col-1 img {
     width: 100%;
-    border-radius: 15px; /* picture corners */
+    border-radius: 15px; /* Smooth picture corners */
 }
-.about-col-2{
-    flex-basis: 60%;
-    font-weight: 200%;
-}
-.sub-title{
+
+.sub-title {
     font-size: 50px;
-    font-weight: 200%;
+    font-weight: 700;
     color: #fff;
 }
-.tab-titles{
+
+.tab-titles {
     display: flex;
-    margin: 20px 0 40px; /* top left/right bottom */
+    justify-content: space-between;
+    margin: 20px 0 40px;
 }
-.tab-links{
-    margin-right: 50px;
-    font-size: 30px;
+
+.tab-links {
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
     color: #ffffff;
 }
-.tab-links::after{  /* line under clickable things */
+
+.tab-links::after {
     content: '';
     width: 0;
     height: 5px;
@@ -113,40 +118,43 @@ nav ul li a:hover::after{
     left: 0;
     bottom: -8px;
     transition: 0.5s;
-    color: #ffffff;
 }
-.tab-links.active-link::after{ /* line under clickable things */
+
+.tab-links.active-link::after {
     width: 50%;
 }
-.tab-contents ul li{
-    list-style: none;
-    margin: 55px 0;
 
+.tab-contents ul li {
+    list-style: none;
+    margin: 15px 0;
 }
-.tab-contents ul li span{
+
+.tab-contents ul li span {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
-    
 }
-.tab-contents{
+
+.tab-contents {
     display: none;
-    font-size: 20px;
-    font-weight: 200;
+    font-size: 16px;
+    font-weight: 300;
 }
-.tab-contents.active-tab{
+
+.tab-contents.active-tab {
     display: block;
 }
+
+/* Clock Position */
 .container h2 {
     position: absolute;
-    top: 0;
-    right: 0;
-    margin: 30px 0px; /* Optional margin to add some space from the edges */
-    height: 50px;
-    font-size: 20px;
-    transform: translate(-50%, -5%);
+    top: 10px;
+    right: 20px;
+    font-size: 16px;
     color: #ffffff;
     font-weight: 550;
-    letter-spacing: 3px;
-    border-radius: 20px;
+    letter-spacing: 2px;
+    background: rgba(0, 0, 0, 0.5); /* Optional for better readability */
+    padding: 5px 10px;
+    border-radius: 10px;
 }
