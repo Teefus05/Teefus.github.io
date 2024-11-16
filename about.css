@@ -14,13 +14,13 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh; /* Ensures the background covers the viewport */
+    min-height: 100vh;
 }
 
 .container {
     padding: 10px 5%;
-    max-width: 1200px; /* Limits width for readability */
-    margin: 0 auto; /* Centers content */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Navigation Bar */
@@ -28,14 +28,15 @@ nav {
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center navigation menu */
-    flex-wrap: wrap; /* Prevents overlap if screen shrinks */
-    border-radius: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Ensures spacing between items when wrapping */
 }
 
 nav ul {
     display: flex;
-    gap: 30px; /* Adds spacing between menu items */
+    gap: 30px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 nav ul li {
@@ -62,7 +63,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-    width: 100%; /* Creates underline effect on hover */
+    width: 100%;
 }
 
 /* About Section */
@@ -76,17 +77,18 @@ nav ul li a:hover::after {
 .row {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Adds spacing between columns */
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .about-col-1,
 .about-col-2 {
-    flex-basis: 48%; /* Columns take up half the width with some gap */
+    flex-basis: 48%;
 }
 
 .about-col-1 img {
     width: 100%;
-    border-radius: 15px; /* Smooth picture corners */
+    border-radius: 15px;
 }
 
 .sub-title {
@@ -99,6 +101,7 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: space-between;
     margin: 20px 0 40px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .tab-links {
@@ -154,7 +157,62 @@ nav ul li a:hover::after {
     color: #ffffff;
     font-weight: 550;
     letter-spacing: 2px;
-    background: rgba(0, 0, 0, 0.5); /* Optional for better readability */
+    background: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 10px;
+}
+
+/* ---------- Media Queries ---------- */
+
+/* Tablet (768px and smaller) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stacks navigation links vertically */
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column; /* Stacks columns vertically */
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%; /* Full-width columns */
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .tab-titles {
+        justify-content: center; /* Center tabs on smaller screens */
+    }
+}
+
+/* Mobile (480px and smaller) */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 10px; /* Reduces spacing between links */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Smaller font for mobile screens */
+    }
+
+    .sub-title {
+        font-size: 30px; /* Reduces title size */
+    }
+
+    .tab-links {
+        font-size: 16px; /* Reduces tab link size */
+    }
+
+    .tab-contents ul li span {
+        font-size: 14px; /* Adjusts text size for better readability */
+    }
+
+    .container h2 {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
 }
